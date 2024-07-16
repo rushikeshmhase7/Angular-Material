@@ -1,0 +1,142 @@
+<p>bankdetails works!</p>
+
+<div>
+    <mat-stepper #stepper  linear>
+      <mat-step [stepControl]="firstFormGroup" required>
+        <form [formGroup]="firstFormGroup" (ngSubmit)="addBasic()">
+          <ng-template matStepLabel>Basic Information</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Full name" formControlName="fullname" required>
+            <mat-icon matPrefix>person_outline</mat-icon>
+          </mat-form-field>
+          <br>
+           <mat-form-field appearance="fill" class="width-80">
+            <mat-label>Email address</mat-label>
+            <input formControlName="email" matInput placeholder="Ex. pat@example.com">
+            <mat-icon matPrefix>email</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Father Name</mat-label>
+            <input matInput placeholder="Father name" formControlName="fathername" required>
+            <mat-icon matPrefix>person_outline</mat-icon>
+          </mat-form-field>
+          <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Mother Name</mat-label>
+            <input matInput placeholder="Mother name" formControlName="mothername" required>
+            <mat-icon matPrefix>person_outline</mat-icon>
+          </mat-form-field>
+          <br>
+              <label id="example-radio-group-label">Gender: </label>
+            <br><br>
+            <mat-radio-group formControlName="gender" aria-label="Select an option">
+              <mat-radio-button value="1">Male</mat-radio-button>
+              <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+              <mat-radio-button class="example-radio-button" value="3">Custom</mat-radio-button>
+            </mat-radio-group>
+            <br><br>
+    
+           <mat-form-field appearance="fill">    
+            <mat-label>Date of Birth</mat-label>        
+            <input  matInput [matDatepicker]="picker" formControlName="dateOfBirth">       
+             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>   
+             <mat-datepicker #picker></mat-datepicker>  
+             </mat-form-field>
+          
+    
+          <br>  
+          <mat-form-field appearance="fill" class="width-20">        
+          <mat-label>Mobile Number</mat-label>        
+          <span matPrefix>+91 &nbsp;</span>       
+          <input formControlName="mobileno" type="mobileno" matInput placeholder="mobileno">
+         
+          </mat-form-field>    
+          <div>
+            <button mat-button matStepperNext [disabled]="!this.firstFormGroup.valid">Next</button>
+          </div>
+        </form>
+  
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" optional>
+        <form [formGroup]="secondFormGroup"  (ngSubmit)="addBankDetails()">
+          <ng-template matStepLabel >Bank Details</ng-template>
+          
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Full name" formControlName="fullname" required>
+            <mat-icon matPrefix>person_outline</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill" class="width-20">        
+            <mat-label>Account Number</mat-label>        
+            <input formControlName="bankAccountNo" type="accountno" matInput placeholder="Account No">
+            <mat-icon matPrefix> person_pin</mat-icon>
+            </mat-form-field> 
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Account Name</mat-label>
+              <input matInput placeholder="Account name" formControlName="bankName" required>
+              <mat-icon matPrefix>account_box</mat-icon>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" class="width-20">        
+              <mat-label>IFSC Code</mat-label>        
+              <input formControlName="ifscCode" type="ifsccode" matInput placeholder="IFSC Code">
+              <mat-icon matPrefix>account_balance</mat-icon>
+              </mat-form-field> 
+              <br>
+              <br>
+              <label id="example-radio-group-label">You have internet banking: </label>
+            <br><br>
+            <mat-radio-group formControlName="internetBanking" aria-label="Select an option">
+              <mat-radio-button value="1">Yes</mat-radio-button>
+              <mat-radio-button class="example-radio-button" value="2">No</mat-radio-button>
+            </mat-radio-group>
+            <br><br>
+            <label id="example-radio-group-label">You have Mobile banking: </label>
+            <br><br>
+            <mat-radio-group formControlName="mobileBanking" aria-label="Select an option">
+              <mat-radio-button value="1">Yes</mat-radio-button>
+              <mat-radio-button class="example-radio-button" value="2">No</mat-radio-button>
+            </mat-radio-group>
+            <br><br>
+  
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup" (ngSubmit)="addAddress()">
+          <ng-template matStepLabel>Communication Address</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>Present Address</mat-label>
+            <input matInput placeholder="Location" formControlName="presentAddress" required>
+            <mat-icon matPrefix>room</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Permanent Address</mat-label>
+            <input matInput placeholder="Location" formControlName="permanentAddress" required>
+            <mat-icon matPrefix> add_location</mat-icon>
+          </mat-form-field>
+          <br>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext [disabled]="!this.thirdFormGroup.valid">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Submitted </ng-template>
+        <p>Thanks for submitting the form</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>

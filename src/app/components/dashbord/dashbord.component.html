@@ -1,0 +1,82 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav>
+  
+      <mat-nav-list (click)="sidenav.close()">
+        <a mat-list-item routerLink="/">
+          <mat-icon>library_books</mat-icon>
+          <span>Courses List</span>
+  
+        </a>
+        <a mat-list-item routerLink="/bank">
+          <mat-icon> add_comment</mat-icon>
+          <span>Add Bank Details</span>
+        </a>
+  
+  
+  
+  
+  
+      </mat-nav-list>
+  
+  
+    </mat-sidenav>
+  
+  
+  
+    <mat-toolbar color="primary"  class="mat-elevation-z3">
+  
+     
+      <!-- // home  -->
+      <button mat-icon-button (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+  
+  
+      <a mat-button    routerLink="/home" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+  
+      <a mat-button    routerLink="/login" routerLinkActive="active">
+        <mat-icon>account_circle</mat-icon>
+        Login
+      </a>
+  
+      <a mat-button     routerLink="/register" routerLinkActive="active">
+        <mat-icon>person_add</mat-icon>
+        Register
+      </a>
+  
+      <a mat-button [matMenuTriggerFor]="dropdown">
+        <mat-icon>question_answer</mat-icon>
+        About Us
+      </a>
+  
+      <mat-menu #dropdown>
+        <button mat-menu-item (click)="ceoMessage()">CEO message</button> 
+         <button mat-menu-item (click)="contactDetails()">Contact Details</button>
+      </mat-menu>
+  
+      <div class="demo-section">
+        <!-- Icon with a badge -->
+        <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+          <!-- Include text description of the icon's meaning for screen-readers -->
+          <span class="cdk-visually-hidden">
+            Example with a home icon with overlaid badge showing the number 15
+          </span>
+      </div>
+  
+      <a mat-button     routerLink="/task" routerLinkActive="active">
+        <mat-icon>task</mat-icon>      Task
+      </a>
+  
+      <div class="extra-space" *ngIf="userName!=null">
+        <h2>Welcome <b>{{userName}} </b></h2>
+      </div>
+    </mat-toolbar>
+  
+  
+  
+      <router-outlet></router-outlet>
+  </mat-sidenav-container> 
+  

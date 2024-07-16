@@ -1,0 +1,285 @@
+{
+  "getLogin": [
+    {
+      "id": "1",
+      "username": "rushi",
+      "password": "rushi123"
+    },
+    {
+      "username": "sdcf123",
+      "password": "4y7gfgde",
+      "id": "2"
+    },
+    {
+      "username": "shdss",
+      "password": "2wdddddddd",
+      "id": "3"
+    },
+    {
+      "username": "rushi",
+      "password": "123456ftgv",
+      "id": "4"
+    },
+    {
+      "username": "maruti",
+      "password": "mbt0854",
+      "id": "5"
+    },
+    {
+      "username": "Hrushi",
+      "password": "4321erferg",
+      "id": "6"
+    },
+    {
+      "username": "Rushikesh",
+      "password": "215snjsjj0",
+      "id": "7"
+    },
+    {
+      "username": "Rushikesh",
+      "password": "rushi123",
+      "id": "8"
+    },
+    {
+      "username": "rushi",
+      "password": "rsu m12",
+      "id": "9"
+    },
+    {
+      "username": "rushi",
+      "password": "234sjz",
+      "id": "10"
+    },
+    {
+      "username": "rushi",
+      "password": "123d",
+      "id": "11"
+    },
+    {
+      "username": "rushikesh",
+      "password": "3sfhs",
+      "id": "12"
+    },
+    {
+      "username": "Hrushikesh",
+      "password": "1234qqwert",
+      "id": "13"
+    },
+    {
+      "id": "a308",
+      "username": "hemant@yash.com",
+      "password": "hemant1234"
+    },
+    {
+      "id": "2f54",
+      "username": "Hemant",
+      "password": "hemant12"
+    },
+    {
+      "id": "1c5d",
+      "username": "omkar",
+      "password": "123456"
+    }
+  ],
+  "getEmployee": [
+    {
+      "id": "1",
+      "fullname": "Rushikesh Radhakrishna Mhase",
+      "email": "rushi@123",
+      "password": "Rushi@1234",
+      "gender": "1",
+      "dateOfBirth": "1995-01-22T18:30:00.000Z",
+      "mobileno": 9850323719,
+      "skills": "AngularIntermediate"
+    },
+    {
+      "id": "2",
+      "fullname": "Rushikesh R Mhase",
+      "email": "Mhase@1234",
+      "password": "rsvsjw835",
+      "gender": "1",
+      "dateOfBirth": "2023-03-13T18:30:00.000Z",
+      "mobileno": "9988776654",
+      "skills": "AngularIntermediate"
+    },
+    {
+      "id": "3",
+      "fullname": "Rushikesh",
+      "email": "mhase@987",
+      "password": "2345e67sdhs",
+      "gender": "1",
+      "dateOfBirth": "2023-03-14T18:30:00.000Z",
+      "mobileno": "2345678897",
+      "skills": "AngularIntermediate"
+    },
+    {
+      "id": "4",
+      "fullname": "shubham",
+      "email": "jaynam@123",
+      "password": "2345ressws",
+      "gender": "1",
+      "dateOfBirth": "2023-03-23T18:30:00.000Z",
+      "mobileno": "9988776655",
+      "skills": "AngularAdvanced"
+    },
+    {
+      "id": "",
+      "fullname": "Hemant Polad",
+      "email": "hemant@yash.com",
+      "password": "hemant1234",
+      "gender": "1",
+      "dateOfBirth": "2024-07-17T18:30:00.000Z",
+      "mobileno": "9988226677",
+      "skills": "AngularIntermediate"
+    },
+    {
+      "id": "",
+      "fullname": "Ramnath Chormal",
+      "email": "ram@yash.com",
+      "password": "123445",
+      "gender": "1",
+      "dateOfBirth": "2024-07-18T18:30:00.000Z",
+      "mobileno": "9988776655",
+      "skills": "AngularIntermediate"
+    },
+    {
+      "id": "",
+      "fullname": "Omkar Patil",
+      "email": "omkar@yash.com",
+      "password": "123456",
+      "gender": "1",
+      "dateOfBirth": "2024-07-07T18:30:00.000Z",
+      "mobileno": "9988775655",
+      "skills": "AngularAdvanced"
+    },
+    {
+      "id": "",
+      "fullname": "Manoj Patil",
+      "email": "manoj@yash.com",
+      "password": "123456",
+      "gender": "1",
+      "dateOfBirth": "2024-07-15T18:30:00.000Z",
+      "mobileno": "9988776655",
+      "skills": "AngularAdvanced"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "addEmployee": [
+    {
+      "id": 1,
+      "fullname": "Rushikesh Radhakrishna Mhase",
+      "email": "rushi@123",
+      "fathername": "Radhakrishna",
+      "mothername": "Anitaa",
+      "gender": "1",
+      "dateOfBirth": "1995-01-22T18:30:00.000Z",
+      "mobileno": 9850323719
+    },
+    {
+      "id": "",
+      "fullname": "RajKumar Singh",
+      "email": "raj@yash.com",
+      "fathername": "YadavSingh",
+      "mothername": "kamala",
+      "gender": "1",
+      "dateOfBirth": "2024-07-11T18:30:00.000Z",
+      "mobileno": "9999988877"
+    },
+    {
+      "id": "",
+      "fullname": "Rushikesh",
+      "email": "rushikesh@yash.com",
+      "fathername": "Radhakrishna",
+      "mothername": "Anitaa",
+      "gender": "1",
+      "dateOfBirth": "2024-07-15T18:30:00.000Z",
+      "mobileno": "9999999999"
+    },
+    {
+      "id": "",
+      "fullname": "Manoj Patil",
+      "email": "manoj@yash.com",
+      "fathername": "Radhakrishna",
+      "mothername": "Sarika",
+      "gender": "1",
+      "dateOfBirth": "2024-07-15T18:30:00.000Z",
+      "mobileno": "9988665544"
+    }
+  ],
+  "addBank": [
+    {
+      "id": 1,
+      "fullname": "Rushikesh Radhakrishna Mhase",
+      "bankAccountNo": 563789234,
+      "bankName": "HDFC Bank",
+      "ifscCode": "UD2392DW",
+      "internetBanking": "1",
+      "mobileBanking": "1"
+    },
+    {
+      "id": "616e",
+      "fullname": "ICICI Bank",
+      "bankAccountNo": "10001023300027",
+      "bankName": "salary",
+      "ifscCode": "IC0227FBI",
+      "internetBanking": "1",
+      "mobileBanking": "1"
+    },
+    {
+      "id": "fd1d",
+      "fullname": "Bank of New York",
+      "bankAccountNo": "1000122293662101",
+      "bankName": "Saving ",
+      "ifscCode": "BNY100B",
+      "internetBanking": "1",
+      "mobileBanking": "1"
+    },
+    {
+      "id": "6903",
+      "fullname": "Bank Of New York",
+      "bankAccountNo": "10002893529",
+      "bankName": "Salary",
+      "ifscCode": "BNY09173A",
+      "internetBanking": "1",
+      "mobileBanking": "2"
+    }
+  ],
+  "addAddress": [
+    {
+      "id": 1,
+      "presentAddress": "pune",
+      "permanentAddress": "Nashik"
+    },
+    {
+      "id": "0a1c",
+      "presentAddress": "Mumbai",
+      "permanentAddress": "Ahilyanagr"
+    },
+    {
+      "id": "5ead",
+      "presentAddress": "Maharashtra",
+      "permanentAddress": "Maharashtra"
+    },
+    {
+      "id": "c226",
+      "presentAddress": "Maharashtra",
+      "permanentAddress": "Maharashtra"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

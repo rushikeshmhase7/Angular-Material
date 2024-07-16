@@ -1,0 +1,88 @@
+<br>
+<h1><marquee>Employee Registration form</marquee></h1>
+
+<!-- <ul *ngIf="employeeList.length>0"> 
+  <li *ngFor="let emp of employeeList">
+      <p class="w-50">name: {{emp.id}}</p>
+      <p class="w-50">name: {{emp.fullname}}</p>
+      <p class="w-50">name: {{emp.email}}</p>
+      <p class="w-50">name: {{emp.password}}</p>
+      <p class="w-50">name: {{emp.dateOfBirth}}</p>
+      <p class="w-50">name: {{emp.gender}}</p>
+      <p class="w-50">name: {{emp.skills}}</p>
+      </li>
+</ul> -->
+      
+
+<mat-grid-list cols="0" rowHeight="700px">
+  <form [formGroup]="registerForm"   (ngSubmit)="addData()">
+    <mat-grid-tile>
+      <div class="example-container">
+        <mat-form-field appearance="fill" class="width-220">
+          <mat-label>Full Name</mat-label>
+          <input formControlName="fullname" matInput placeholder="Full Name">
+         <mat-icon matPrefix>person_outline</mat-icon>
+        </mat-form-field>
+    
+      
+        <br>
+        <mat-form-field appearance="fill" class="width-80">
+          <mat-label>Email address</mat-label>
+          <input formControlName="email" matInput placeholder="Ex. pat@example.com">
+          <mat-icon matPrefix>email</mat-icon>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill" class="width-80">
+          <mat-label>Enter password</mat-label>
+          <input formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <br>
+        <label id="example-radio-group-label">Gender: </label>
+        <br><br>
+        <mat-radio-group formControlName="gender" aria-label="Select an option">
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+          <mat-radio-button class="example-radio-button" value="3">Custom</mat-radio-button>
+        </mat-radio-group>
+        <br><br>
+
+        <mat-form-field appearance="fill">    
+        <mat-label>Date of Birth</mat-label>        
+        <input  matInput [matDatepicker]="picker" formControlName="dateOfBirth">       
+         <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->        
+         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>   
+         <mat-datepicker #picker></mat-datepicker>  
+         </mat-form-field>
+      
+
+      <br>  
+      <mat-form-field appearance="fill" class="width-20">        
+      <mat-label>Mobile Number</mat-label>        
+      <span matPrefix>+91 &nbsp;</span>       
+      <input formControlName="mobileno" type="mobileno" matInput placeholder="Mobileno">
+      <!--[formControl]="mobileno" required>        
+      <mat-error *ngIf="mobileno.invalid">{{getErrorMob()}}</mat-error>     --> 
+      </mat-form-field>     
+      <br>    
+      <mat-form-field appearance="outline">       
+       <mat-label>Skills:</mat-label>    
+       <mat-select formControlName="skills" placeholder="skill">         
+       <mat-option value="AngularBasic">Angular Basic</mat-option>          
+       <mat-option value="AngularIntermediate">Angular Intermediate</mat-option>          
+       <mat-option value="AngularAdvanced">Angular Advanced</mat-option>        
+      </mat-select>      
+    </mat-form-field>
+    <div>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!this.registerForm.valid">Submit</button>
+    </div>
+
+  </div>
+
+  </mat-grid-tile>
+  </form>
+ 
+  </mat-grid-list>
